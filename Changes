@@ -1,5 +1,7 @@
 Changes for MooseX-Role-Parameterized
 
+    * repository migrated to the github moose organization
+
 1.02 September 11, 2013
     * set %INC entries in test to avoid failures with
       Moose pre-2.11 (kentfrederic)

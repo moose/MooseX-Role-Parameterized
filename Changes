@@ -1,4 +1,7 @@
-Changes for MooseX-Role-Parameterized
+Revision history for {{$dist->name}}
+
+{{$NEXT}}
+    * Convert this distribution to Dist::Zilla to resolve packaging insanity
 
 1.03 2014-07-30
     * This extension is now implemented as a role metarole, which means it can

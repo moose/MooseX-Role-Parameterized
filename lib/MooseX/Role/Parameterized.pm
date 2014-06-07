@@ -1,13 +1,13 @@
 package MooseX::Role::Parameterized;
+
 use 5.008001;
-use Moose::Role ();
+use Moose 2.0300 ();
 use Moose::Exporter;
 use Carp 'confess';
 use Moose::Util 'find_meta';
 
 use MooseX::Role::Parameterized::Meta::Trait::Parameterizable;
 
-our $VERSION = '1.03';
 our $CURRENT_METACLASS;
 
 sub _current_metaclass { $CURRENT_METACLASS }

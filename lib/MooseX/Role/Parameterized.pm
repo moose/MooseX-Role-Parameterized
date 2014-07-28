@@ -5,7 +5,7 @@ use Moose::Exporter;
 use Carp 'confess';
 use Moose::Util 'find_meta';
 
-use MooseX::Role::Parameterized::Meta::Role::Parameterizable;
+use MooseX::Role::Parameterized::Meta::Trait::Parameterizable;
 
 our $VERSION = '1.02';
 our $CURRENT_METACLASS;
@@ -13,10 +13,13 @@ our $CURRENT_METACLASS;
 sub current_metaclass { $CURRENT_METACLASS }
 
 Moose::Exporter->setup_import_methods(
-    also        => 'Moose::Role',
-    with_caller => ['parameter', 'role'],
-    with_meta   => ['method'],
-    meta_lookup => sub { current_metaclass || find_meta(shift) },
+    also           => 'Moose::Role',
+    with_caller    => [ 'parameter', 'role' ],
+    with_meta      => ['method'],
+    meta_lookup    => sub { current_metaclass || find_meta(shift) },
+    role_metaroles => {
+        role => ['MooseX::Role::Parameterized::Meta::Trait::Parameterizable'],
+    },
 );
 
 sub parameter {
@@ -46,14 +49,6 @@ sub role (&) {
         if current_metaclass && current_metaclass->genitor->name eq $caller;
 
     find_meta($caller)->role_generator($role_generator);
-}
-
-sub init_meta {
-    my $self = shift;
-    my %options = @_;
-    $options{metaclass} ||= 'MooseX::Role::Parameterized::Meta::Role::Parameterizable';
-
-    return Moose::Role->init_meta(%options);
 }
 
 sub method {

@@ -1,6 +1,5 @@
-package MooseX::Role::Parameterized::Meta::Role::Parameterizable;
-use Moose;
-extends 'Moose::Meta::Role';
+package MooseX::Role::Parameterized::Meta::Trait::Parameterizable;
+use Moose::Role;
 
 our $VERSION = '1.02';
 
@@ -76,7 +75,11 @@ sub generate_role {
 
     local $MooseX::Role::Parameterized::CURRENT_METACLASS = $role;
 
-    $self->apply_parameterizable_role($role);
+    # The generate_role method is being called directly by things like
+    # MooseX::ClassCompositor. We don't want to force such modules to pass
+    # this arg so we default to something sane.
+    my $orig_apply = $args{orig_apply} || Moose::Meta::Role->can('apply');
+    $self->$orig_apply($role);
 
     $self->role_generator->($parameters,
         operating_on => $role,
@@ -97,7 +100,8 @@ sub _role_for_combination {
     );
 }
 
-sub apply {
+around apply => sub {
+    my $orig     = shift;
     my $self     = shift;
     my $consumer = shift;
     my %args     = @_;
@@ -105,19 +109,13 @@ sub apply {
     my $role = $self->generate_role(
         consumer   => $consumer,
         parameters => \%args,
+        orig_apply => $orig,
     );
 
     $role->apply($consumer, %args);
-}
+};
 
-sub apply_parameterizable_role {
-    my $self = shift;
-
-    $self->SUPER::apply(@_);
-}
-
-__PACKAGE__->meta->make_immutable;
-no Moose;
+no Moose::Role;
 
 1;
 

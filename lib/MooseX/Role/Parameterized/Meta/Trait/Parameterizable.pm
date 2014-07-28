@@ -181,7 +181,7 @@ three named parameters:
 
 =over 4
 
-=item arguments
+=item parameters
 
 A hashref of parameters for the role, same as would be passed in at a "with"
 statement.

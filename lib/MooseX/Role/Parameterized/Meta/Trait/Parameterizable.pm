@@ -177,7 +177,7 @@ The arguments are those specified by the consumer as parameter values.
 
 This method generates and returns a new instance of
 L</parameterized_role_metaclass>. It can take any combination of
-three named parameters:
+three named arguments:
 
 =over 4
 

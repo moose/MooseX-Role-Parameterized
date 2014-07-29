@@ -1,4 +1,5 @@
 package MooseX::Role::Parameterized::Parameters;
+# ABSTRACT: base class for parameters
 
 use Moose;
 __PACKAGE__->meta->make_immutable;
@@ -7,10 +8,6 @@ no Moose;
 1;
 
 __END__
-
-=head1 NAME
-
-MooseX::Role::Parameterized::Parameters - base class for parameters
 
 =head1 DESCRIPTION
 

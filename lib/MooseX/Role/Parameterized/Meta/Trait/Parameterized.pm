@@ -1,4 +1,5 @@
 package MooseX::Role::Parameterized::Meta::Trait::Parameterized;
+# ABSTRACT: trait for parameterized roles
 
 use Moose::Role;
 use MooseX::Role::Parameterized::Parameters;
@@ -38,10 +39,6 @@ around reinitialize => sub {
 1;
 
 __END__
-
-=head1 NAME
-
-MooseX::Role::Parameterized::Meta::Trait::Parameterized - trait for parameterized roles
 
 =head1 DESCRIPTION
 

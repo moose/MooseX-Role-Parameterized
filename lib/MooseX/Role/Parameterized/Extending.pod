@@ -1,5 +1,8 @@
 package MooseX::Role::Parameterized::Extending;
 
+use strict;
+use warnings;
+
 # ABSTRACT: extending MooseX::Role::Parameterized roles
 
 __END__

@@ -1,5 +1,8 @@
 package MooseX::Role::Parameterized::Tutorial;
 
+use strict;
+use warnings;
+
 # ABSTRACT: why and how
 
 __END__

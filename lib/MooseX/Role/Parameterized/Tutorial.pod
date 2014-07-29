@@ -101,7 +101,7 @@ your methods may use parameters however they wish!
 =head1 USES
 
 Ideally these will become fully-explained examples in something resembling
-L<Moose::Cookbook>. But for now, only a braindump.
+L<Moose::Cookbook>. But for now, only a brain dump.
 
 =over 4
 

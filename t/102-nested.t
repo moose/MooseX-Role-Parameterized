@@ -27,7 +27,7 @@ use lib "$FindBin::Bin/lib";
     use Moose;
     ::is( ::exception {
         with 'Foo';
-    }, undef);
+    }, undef, 'Can consume the Foo role without providing parameters');
 }
 
 {
@@ -35,7 +35,7 @@ use lib "$FindBin::Bin/lib";
     use Moose;
     ::is( ::exception {
         with 'Bar';
-    }, undef);
+    }, undef, 'Can consume the Bar role without providing parameters');
 }
 
 my $foo = Foo::Class->meta->roles->[0];

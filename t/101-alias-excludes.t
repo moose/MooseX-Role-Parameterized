@@ -61,4 +61,3 @@ is(OrdinaryClass->code, 'originally code');
 is(OrdinaryClass->new_code, 'originally code');
 
 done_testing;
-

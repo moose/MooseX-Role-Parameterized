@@ -50,4 +50,3 @@ L<MooseX::Role::Parameterized>:
 And there you go! C<MyApp::Role> now has the C<MooseX::MagicRole> trait applied.
 
 =cut
-

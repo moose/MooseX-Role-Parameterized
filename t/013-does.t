@@ -26,4 +26,3 @@ cmp_ok(
 );
 
 done_testing;
-

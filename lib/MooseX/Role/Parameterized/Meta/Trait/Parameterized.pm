@@ -67,4 +67,3 @@ Returns the L<MooseX::Role::Parameterized::Parameters> object that represents
 the specific parameter values for this parameterized role.
 
 =cut
-

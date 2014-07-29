@@ -70,4 +70,3 @@ for my $param_name ('first_name', 'last_name') {
 }
 
 done_testing;
-

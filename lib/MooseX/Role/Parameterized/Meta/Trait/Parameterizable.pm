@@ -203,4 +203,3 @@ Overrides L<Moose::Meta::Role/apply> to automatically generate the
 parameterized role.
 
 =cut
-

@@ -23,4 +23,3 @@ with their parameters bound. See
 L<MooseX::Role::Parameterized::Meta::Trait::Parameterized> which has all the guts.
 
 =cut
-

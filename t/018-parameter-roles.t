@@ -59,4 +59,3 @@ is( $p->blech, "yes" );
 is( $p->foo, "hello foo" );
 
 done_testing;
-

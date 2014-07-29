@@ -82,4 +82,3 @@ ok($chastity->is_worn, "default for belt is worn");
 is($chastity->slot, 'waist');
 
 done_testing;
-

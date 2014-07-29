@@ -27,4 +27,3 @@ Each parameterized role gets their own instance of the anonymous subclass
 (owned by the parameterizable role).
 
 =cut
-

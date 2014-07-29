@@ -52,4 +52,3 @@ is(MyClass::LabeledURL->meta->get_attribute('url')->label, 'yay');
 is(MyClass::LabeledURL::Redux->meta->get_attribute('url')->label, 'overridden');
 
 done_testing;
-

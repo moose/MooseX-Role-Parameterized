@@ -62,4 +62,3 @@ ok(!$utility->is_worn);
 is($utility->slot, 'waist');
 
 done_testing;
-

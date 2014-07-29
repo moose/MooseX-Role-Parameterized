@@ -33,4 +33,3 @@ ok(MyClass->can('attr'), "the parameterized attribute was composed");
 ok(MyClass->can('meth'), "the unparameterized method was composed");
 
 done_testing;
-

@@ -84,4 +84,3 @@ is (exception {
 }, undef);
 
 done_testing;
-

@@ -75,4 +75,3 @@ is($meta->get_attribute('name')->label, 'TODO!');
 is($meta->get_attribute('body')->label, 'nevermind...');
 
 done_testing;
-

@@ -48,4 +48,3 @@ MyClass->new;
 is_deeply([splice @calls], ["calling new", "took 0 seconds", "called new"], "instrumented new");
 
 done_testing;
-

@@ -35,4 +35,3 @@ Moose::Meta::Class->create_anon_class(
 );
 
 done_testing;
-

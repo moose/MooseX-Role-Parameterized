@@ -80,4 +80,3 @@ subtest "generating a role with a provided name" => sub {
 };
 
 done_testing;
-

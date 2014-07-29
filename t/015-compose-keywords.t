@@ -47,4 +47,3 @@ for my $meta (MyRole->meta, MyRole->meta->generate_role) {
 }
 
 done_testing;
-

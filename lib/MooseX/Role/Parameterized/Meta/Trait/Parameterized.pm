@@ -50,6 +50,8 @@ generated this role object.
 
 =head1 ATTRIBUTES
 
+=for stopwords genitor metaobject
+
 =head2 genitor
 
 Returns the L<MooseX::Role::Parameterized::Meta::Role::Parameterizable>

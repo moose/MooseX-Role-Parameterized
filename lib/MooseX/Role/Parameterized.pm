@@ -165,6 +165,8 @@ The benefits of using an object are similar to the benefits of using Moose. You
 get an easy way to specify lazy defaults, type constraint, delegation, and so
 on. You get to use MooseX modules.
 
+=for stopwords metaobject
+
 You also get the usual introspective and intercessory abilities that come
 standard with the metaobject protocol. Ambitious users should be able to add
 traits to the parameters metaclass to further customize behavior. Please let
@@ -191,6 +193,8 @@ L<http://www.modernperlbooks.com/mt/2011/01/the-parametric-role-of-my-mvc-plugin
 L<http://jjnapiorkowski.typepad.com/modern-perl/2010/08/parameterized-roles-and-method-traits-redo.html>
 
 L<http://sartak.org/talks/yapc-asia-2009/(parameterized)-roles/>
+
+=for stopwords Joose
 
 L<https://github.com/SamuraiJack/JooseX-Role-Parameterized> - this extension ported to JavaScript's Joose
 

@@ -12,11 +12,16 @@ our $CURRENT_METACLASS;
 
 sub current_metaclass { $CURRENT_METACLASS }
 
+my $meta_lookup = sub {
+    my $for = shift;
+    current_metaclass() || find_meta($for);
+};
+
 Moose::Exporter->setup_import_methods(
     also           => 'Moose::Role',
     with_caller    => [ 'parameter', 'role' ],
-    with_meta      => ['method'],
-    meta_lookup    => sub { current_metaclass || find_meta(shift) },
+    with_meta      => [ 'method', 'with' ],
+    meta_lookup    => $meta_lookup,
     role_metaroles => {
         role => ['MooseX::Role::Parameterized::Meta::Trait::Parameterizable'],
     },
@@ -64,6 +69,12 @@ sub method {
 
     $meta->add_method($name => $method);
 }
+
+sub with {
+    local $CURRENT_METACLASS = undef;
+    Moose::Role::with(@_);
+}
+
 
 1;
 

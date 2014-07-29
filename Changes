@@ -1,5 +1,4 @@
 {{$NEXT}}
-
     * This extension is now implemented a role metarole, which means it can
       (mostly) cooperate with other role extensions, such as
       MooseX::Role::WithOverloading. Note that you should load

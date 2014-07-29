@@ -3,6 +3,7 @@ package MooseX::Role::Parameterized::Meta::Trait::Parameterized;
 use Moose::Role;
 use MooseX::Role::Parameterized::Parameters;
 use Moose::Util 'find_meta';
+use namespace::autoclean;
 
 has genitor => (
     is       => 'ro',
@@ -33,8 +34,6 @@ around reinitialize => sub {
     $MooseX::Role::Parameterized::CURRENT_METACLASS = $new;
     return $new;
 };
-
-no Moose::Role;
 
 1;
 

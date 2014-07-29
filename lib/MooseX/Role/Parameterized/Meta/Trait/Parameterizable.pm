@@ -4,6 +4,7 @@ use Moose::Role;
 use MooseX::Role::Parameterized::Meta::Role::Parameterized;
 use MooseX::Role::Parameterized::Parameters;
 use Module::Runtime 'use_module';
+use namespace::autoclean;
 
 has parameterized_role_metaclass => (
     is      => 'ro',
@@ -112,8 +113,6 @@ around apply => sub {
 
     $role->apply($consumer, %args);
 };
-
-no Moose::Role;
 
 1;
 

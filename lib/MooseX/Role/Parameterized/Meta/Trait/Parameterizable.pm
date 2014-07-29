@@ -187,6 +187,8 @@ we generate an anonymous role.
 
 =item consumer
 
+=for stopwords metaobject
+
 A consumer metaobject, if available.
 
 =back

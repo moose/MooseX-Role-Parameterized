@@ -82,6 +82,8 @@ sub with {
 
 __END__
 
+=for Pod::Coverage method parameter role with
+
 =head1 SYNOPSIS
 
     package Counter;

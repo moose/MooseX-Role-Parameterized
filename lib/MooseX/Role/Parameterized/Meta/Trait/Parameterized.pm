@@ -8,7 +8,7 @@ use Moose::Util 'find_meta';
 
 has genitor => (
     is       => 'ro',
-    isa      => 'MooseX::Role::Parameterized::Meta::Role::Parameterizable',
+    does     => 'MooseX::Role::Parameterized::Meta::Trait::Parameterizable',
     required => 1,
 );
 

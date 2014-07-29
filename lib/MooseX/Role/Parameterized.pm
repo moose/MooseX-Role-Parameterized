@@ -1,6 +1,7 @@
 package MooseX::Role::Parameterized;
 
 use 5.008001;
+use Moose 2.0300 ();
 use Moose::Role ();
 use Moose::Exporter;
 use Carp 'confess';

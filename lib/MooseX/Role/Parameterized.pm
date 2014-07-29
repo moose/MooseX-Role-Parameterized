@@ -1,4 +1,5 @@
 package MooseX::Role::Parameterized;
+# ABSTRACT: roles with composition parameters
 
 use 5.008001;
 use Moose 2.0300 ();
@@ -80,10 +81,6 @@ sub with {
 1;
 
 __END__
-
-=head1 NAME
-
-MooseX::Role::Parameterized - roles with composition parameters
 
 =head1 SYNOPSIS
 
@@ -177,10 +174,6 @@ You must use this syntax to declare methods in the role block:
 C<< method NAME => sub { ... }; >>. This is due to a limitation in Perl. In
 return though you can use parameters I<in your methods>!
 
-=head1 AUTHOR
-
-Shawn M Moore, C<sartak@gmail.com>
-
 =head1 SEE ALSO
 
 L<http://sartak.org/2009/01/parametric-roles-in-perl-5.html>
@@ -198,12 +191,5 @@ L<http://jjnapiorkowski.typepad.com/modern-perl/2010/08/parameterized-roles-and-
 L<http://sartak.org/talks/yapc-asia-2009/(parameterized)-roles/>
 
 L<https://github.com/SamuraiJack/JooseX-Role-Parameterized> - this extension ported to JavaScript's Joose
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright 2007-2010 Infinity Interactive
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
 
 =cut

@@ -1,8 +1,7 @@
+# PODNAME: MooseX::Role::Parameterized::Tutorial
+# ABSTRACT: why and how
+
 =pod
-
-=head1 NAME
-
-MooseX::Role::Parameterized::Tutorial - why and how
 
 =head1 MOTIVATION
 

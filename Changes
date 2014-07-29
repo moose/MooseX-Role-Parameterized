@@ -1,4 +1,4 @@
-Changes for MooseX-Role-Parameterized
+{{$NEXT}}
 
     * This extension is now implemented a role metarole, which means it can
       (mostly) cooperate with other role extensions, such as

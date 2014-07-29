@@ -82,7 +82,7 @@ sub with {
 
 __END__
 
-=for stopwords API backend Joose metaclass metaobject namespace parameterizeable parameterized
+=for Pod::Coverage method parameter role with
 
 =head1 SYNOPSIS
 

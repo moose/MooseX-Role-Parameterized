@@ -123,16 +123,16 @@ __END__
 
 =head1 NAME
 
-MooseX::Role::Parameterized::Meta::Role::Parameterizable - metaclass for parameterizable roles
+MooseX::Role::Parameterized::Meta::Role::Parameterizable - trait for parameterizable roles
 
 =head1 DESCRIPTION
 
-This is the metaclass for parameterizable roles, roles that have
-their parameters currently unbound. These are the roles that you
-use L<Moose/with>, but instead of composing the parameterizable
-role, we construct a new parameterized role
-(L<MooseX::Role::Parameterized::Meta::Role::Parameterized>) and use
-that new parameterized instead.
+This is the trait that is applied to the metaclass for parameterizable roles,
+roles that have their parameters currently unbound. These are the roles that
+you use L<Moose/with>, but instead of composing the parameterizable role, we
+construct a new parameterized role
+(L<MooseX::Role::Parameterized::Meta::Role::Parameterized>) and use that new
+parameterized role instead.
 
 =head1 ATTRIBUTES
 

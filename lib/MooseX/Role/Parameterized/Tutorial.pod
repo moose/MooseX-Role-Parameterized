@@ -27,7 +27,7 @@ Parameterized roles offer a solution to these (and other) kinds of problems.
 
 =head1 USAGE
 
-=head3 C<with>
+=head2 C<with>
 
 The syntax of a class consuming a parameterized role has not changed
 from the standard C<with>. You pass in parameters just like you
@@ -53,7 +53,7 @@ immediately after the role they belong to:
 We, like Moose itself, use L<Data::OptList> to make sure that a list of role
 names and associated parameters is handled correctly.
 
-=head3 C<parameter>
+=head2 C<parameter>
 
 Inside your parameterized role, you specify a set of parameters. This is
 exactly like specifying the attributes of a class. Instead of L<Moose/has> you
@@ -75,7 +75,7 @@ the parameters object, so data hiding is not as important than in the general
 case of L<Moose/has>. If you do not want an accessor, you can use
 C<< is => 'bare' >>.
 
-=head3 C<role>
+=head2 C<role>
 
 C<role> takes a block of code that will be used to generate your role with its
 parameters bound. Here is where you declare components that depend on

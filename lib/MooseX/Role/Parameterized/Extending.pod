@@ -3,6 +3,7 @@ package MooseX::Role::Parameterized::Extending;
 use strict;
 use warnings;
 
+# PODNAME: MooseX::Role::Parameterized::Extending
 # ABSTRACT: extending MooseX::Role::Parameterized roles
 
 __END__

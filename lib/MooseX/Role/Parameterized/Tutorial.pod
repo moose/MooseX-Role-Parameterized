@@ -3,6 +3,7 @@ package MooseX::Role::Parameterized::Tutorial;
 use strict;
 use warnings;
 
+# PODNAME: MooseX::Role::Parameterized::Tutorial
 # ABSTRACT: why and how
 
 __END__

@@ -146,7 +146,7 @@ The name of the class that will be used to construct the parameters object.
 
 =head2 parameters_metaclass
 
-A metaclass representing this roles's parameters. It will be an anonymous
+A metaclass representing this role's parameters. It will be an anonymous
 subclass of L</parameters_class>. Each call to
 L<MooseX::Role::Parameters/parameter> adds an attribute to this metaclass.
 

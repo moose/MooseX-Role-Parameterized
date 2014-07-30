@@ -7,7 +7,7 @@ use Moose::Util 'find_meta';
 
 use MooseX::Role::Parameterized::Meta::Trait::Parameterizable;
 
-our $VERSION = '1.02';
+our $VERSION = '1.03';
 our $CURRENT_METACLASS;
 
 sub current_metaclass { $CURRENT_METACLASS }

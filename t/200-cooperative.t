@@ -3,7 +3,7 @@ use warnings;
 use Test::More;
 
 use Test::Requires {
-    'MooseX::Role::WithOverloading' => '0',
+    'MooseX::Role::WithOverloading' => '0.14',
 };
 
 do {

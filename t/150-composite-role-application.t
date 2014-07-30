@@ -98,7 +98,7 @@ do {
     package MyProxyConsumer;
     use Moose;
     with(
-        MyRoleProxy => { 
+        MyRoleProxy => {
             rolename   => 'MyCompositeRoleA',
             roleparams => { attribute => 'baz' },
         },

@@ -1,20 +1,18 @@
 package MooseX::Role::Parameterized::Meta::Role::Parameterized;
+
 use Moose;
 extends 'Moose::Meta::Role';
 with 'MooseX::Role::Parameterized::Meta::Trait::Parameterized';
 
-our $VERSION = '1.02';
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
 
 1;
 
+# ABSTRACT: metaclass for parameterized roles
+
 __END__
-
-=head1 NAME
-
-MooseX::Role::Parameterized::Meta::Role::Parameterized - metaclass for parameterized roles
 
 =head1 DESCRIPTION
 

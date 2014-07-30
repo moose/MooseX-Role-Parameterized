@@ -1,8 +1,14 @@
+package MooseX::Role::Parameterized::Extending;
+
+use strict;
+use warnings;
+
+# PODNAME: MooseX::Role::Parameterized::Extending
+# ABSTRACT: extending MooseX::Role::Parameterized roles
+
+__END__
+
 =pod
-
-=head1 NAME
-
-MooseX::Role::Parameterized::Extending - extending MooseX::Role::Parameterized roles
 
 =head1 DESCRIPTION
 

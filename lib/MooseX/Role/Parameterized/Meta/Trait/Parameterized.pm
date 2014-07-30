@@ -1,7 +1,6 @@
 package MooseX::Role::Parameterized::Meta::Trait::Parameterized;
-use Moose::Role;
 
-our $VERSION = '1.02';
+use Moose::Role;
 
 use MooseX::Role::Parameterized::Parameters;
 use Moose::Util 'find_meta';
@@ -40,11 +39,9 @@ no Moose::Role;
 
 1;
 
+# ABSTRACT: trait for parameterized roles
+
 __END__
-
-=head1 NAME
-
-MooseX::Role::Parameterized::Meta::Trait::Parameterized - trait for parameterized roles
 
 =head1 DESCRIPTION
 

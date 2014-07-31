@@ -142,8 +142,6 @@ around reinitialize => sub {
     return $new;
 };
 
-no Moose::Role;
-
 1;
 
 __END__

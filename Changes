@@ -1,6 +1,10 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - If a parameterizable role was reinitialized after any parameters or a
+      role block was declared, those declarations were lost. Reinitialization
+      usually occurs when new metaroles are applied to the role by other
+      MooseX modules.
 
 1.04      2014-07-31 14:53:26Z
     - Convert this distribution to Dist::Zilla to resolve packaging insanity

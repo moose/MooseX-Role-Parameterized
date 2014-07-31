@@ -29,6 +29,7 @@ has parameters_metaclass => (
         add_parameter        => 'add_attribute',
         construct_parameters => 'new_object',
     },
+    predicate => '_has_parameters_metaclass',
 );
 
 has role_generator => (
@@ -113,6 +114,32 @@ around apply => sub {
     );
 
     $role->apply($consumer, %args);
+};
+
+around reinitialize => sub {
+    my $orig  = shift;
+    my $class = shift;
+    my ($pkg) = @_;
+    my $meta  = blessed($pkg) ? $pkg : find_meta($pkg);
+
+    my $meta_meta = $meta->meta;
+
+    my %p;
+    if ( $meta_meta->can('does_role') && $meta_meta->does_role(__PACKAGE__) ) {
+        %p = map { $_ => $meta->$_ }
+            qw( parameterized_role_metaclass parameters_class );
+        $p{parameters_metaclass} = $meta->parameters_metaclass
+            if $meta->_has_parameters_metaclass;
+        $p{role_generator} = $meta->role_generator
+            if $meta->has_role_generator;
+    }
+
+    my $new = $class->$orig(
+        @_,
+        %p,
+    );
+
+    return $new;
 };
 
 1;

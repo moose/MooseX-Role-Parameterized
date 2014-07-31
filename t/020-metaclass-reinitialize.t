@@ -5,7 +5,7 @@ use Test::More;
 BEGIN {
     require Moose;
     if (Moose->VERSION < 1.9900) {
-        plan skip_all => "this test isn't relevant on Moose 1.x";
+        plan skip_all => q{this test isn't relevant on Moose 1.x};
     }
 }
 
@@ -27,7 +27,7 @@ BEGIN {
 }
 
 {
-    package Foo::Role;
+    package Foo::Role1;
     use MooseX::Role::Parameterized;
 
     role {
@@ -40,14 +40,67 @@ BEGIN {
 }
 
 {
-    package Foo;
+    package Foo1;
     use Moose;
-    with 'Foo::Role';
+    with 'Foo::Role1';
 }
 
 {
-    is(Foo->meta->find_attribute_by_name('foo')->foo, 'bar',
-       "applied_attribute metaroles work");
+    is(
+        Foo1->meta->find_attribute_by_name('foo')->foo, 'bar',
+        'applied_attribute metaroles work when applied to generated role'
+    );
+}
+
+{
+    package Foo::Role2;
+    use MooseX::Role::Parameterized;
+    Foo::Exporter->import;
+
+    has foo => (is => 'ro', foo => 'bar');
+
+    role {
+        my $p = shift;
+
+        has bar => (is => 'ro');
+    };
+}
+
+{
+    package Foo2;
+    use Moose;
+    with 'Foo::Role2';
+}
+
+{
+    is(Foo2->meta->find_attribute_by_name('foo')->foo, 'bar',
+       'applied_attribute metaroles work when applied to parameterizable role');
+}
+
+{
+    package Foo::Role3;
+    use MooseX::Role::Parameterized;
+
+    has foo => (is => 'ro', foo => 'bar');
+
+    role {
+        my $p = shift;
+
+        has bar => (is => 'ro');
+    };
+
+    Foo::Exporter->import;
+}
+
+{
+    package Foo3;
+    use Moose;
+    with 'Foo::Role3';
+}
+
+{
+    is(Foo3->meta->find_attribute_by_name('foo')->foo, 'bar',
+       'applied_attribute metaroles work when applied to parameterizable role after the role block has been defined');
 }
 
 done_testing;

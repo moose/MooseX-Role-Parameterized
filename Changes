@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.04      2014-07-31 14:53:26Z
     - Convert this distribution to Dist::Zilla to resolve packaging insanity
 
 1.03  2014-07-30

@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.05      2014-07-31 18:26:03Z
     - If a parameterizable role was reinitialized after any parameters or a
       role block was declared, those declarations were lost. Reinitialization
       usually occurs when new metaroles are applied to the role by other

@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Restored MooseX::Role::Parameterized->current_metaclass as a public
+      method. Apparently there is code on CPAN that relies on this.
 
 1.05      2014-07-31 18:26:03Z
     - If a parameterizable role was reinitialized after any parameters or a

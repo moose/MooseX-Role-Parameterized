@@ -12,11 +12,11 @@ use MooseX::Role::Parameterized::Meta::Trait::Parameterizable;
 
 our $CURRENT_METACLASS;
 
-sub _current_metaclass { $CURRENT_METACLASS }
+sub current_metaclass { $CURRENT_METACLASS }
 
 my $meta_lookup = sub {
     my $for = shift;
-    _current_metaclass() || find_meta($for);
+    current_metaclass() || find_meta($for);
 };
 
 Moose::Exporter->setup_import_methods(
@@ -33,7 +33,7 @@ sub parameter {
     my $caller = shift;
 
     confess "'parameter' may not be used inside of the role block"
-        if _current_metaclass && _current_metaclass->genitor->name eq $caller;
+        if current_metaclass && current_metaclass->genitor->name eq $caller;
 
     my $meta = find_meta($caller);
 
@@ -53,7 +53,7 @@ sub role (&) {
     my $role_generator = shift;
 
     confess "'role' may not be used inside of the role block"
-        if _current_metaclass && _current_metaclass->genitor->name eq $caller;
+        if current_metaclass && current_metaclass->genitor->name eq $caller;
 
     find_meta($caller)->role_generator($role_generator);
 }
@@ -82,7 +82,7 @@ sub with {
 
 __END__
 
-=for Pod::Coverage method parameter role with
+=for Pod::Coverage current_metaclass method parameter role with
 
 =head1 SYNOPSIS
 

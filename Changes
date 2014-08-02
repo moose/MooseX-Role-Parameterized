@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.06      2014-08-02 04:34:06Z
     - Restored MooseX::Role::Parameterized->current_metaclass as a public
       method. Apparently there is code on CPAN that relies on this.
 

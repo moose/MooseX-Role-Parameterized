@@ -8,7 +8,7 @@ MooseX::Role::Parameterized - roles with composition parameters
 
 =head1 VERSION
 
-version 1.05
+version 1.06
 
 =head1 SYNOPSIS
 
@@ -86,7 +86,7 @@ The benefits of using an object are similar to the benefits of using Moose. You
 get an easy way to specify lazy defaults, type constraint, delegation, and so
 on. You get to use MooseX modules.
 
-=for Pod::Coverage method parameter role with
+=for Pod::Coverage current_metaclass method parameter role with
 
 =head1 L<MooseX::Role::Parameterized::Tutorial>
 

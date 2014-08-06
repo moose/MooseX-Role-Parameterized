@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - re-release to remove README.pod from shipped dist
 
 1.06      2014-08-02 04:34:06Z
     - Restored MooseX::Role::Parameterized->current_metaclass as a public

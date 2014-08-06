@@ -8,7 +8,7 @@ MooseX::Role::Parameterized - roles with composition parameters
 
 =head1 VERSION
 
-version 1.06
+version 1.07
 
 =head1 SYNOPSIS
 
@@ -139,11 +139,13 @@ the same terms as the Perl 5 programming language system itself.
 
 =head1 CONTRIBUTORS
 
+=for stopwords Chris Weyl Csson Dave Rolsky Florian Ragwitz Jesse Luehrs Karen Etheridge Oliver Charles Ricardo Signes Robert 'phaylon' Sedlacek Todd Hepler Yuval Kogman
+
 =over 4
 
 =item *
 
-Chris Weyl <rsrchboy@cpan.org>
+Chris Weyl <cweyl@alumni.drew.edu>
 
 =item *
 

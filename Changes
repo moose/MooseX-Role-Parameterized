@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - add x_breaks metadata for incompatibility issue with MooseX::Storage
+      (now resolved with MooseX-Storage-0.47)
 
 1.07      2014-08-06 05:44:11Z
     - re-release to remove README.pod from shipped dist

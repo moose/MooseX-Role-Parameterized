@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.08      2014-08-23 22:38:12Z
     - add x_breaks metadata for incompatibility issue with MooseX::Storage
       (now resolved with MooseX-Storage-0.47)
 

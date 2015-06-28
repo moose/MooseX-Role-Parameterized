@@ -6,16 +6,18 @@ addons:
       - aspell
 language: perl
 perl:
+# for what versions are available, see:
+# https://github.com/travis-ci/travis-cookbooks/blob/master/ci_environment/perlbrew/attributes/multi.rb
   - blead
   - dev
-  - 5.22
-  - 5.20
-  - 5.18
-  - 5.16
-  - 5.14
-  - 5.12
-  - 5.10
-  - 5.8
+  - "5.22"
+  - "5.20"
+  - "5.18"
+  - "5.16"
+  - "5.14"
+  - "5.12"
+  - "5.10"
+  - "5.8"
 matrix:
   allow_failures:
     - perl: blead

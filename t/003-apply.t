@@ -7,7 +7,7 @@ my %args;
 do {
     package MyRole::Storage;
     use MooseX::Role::Parameterized;
-    use Moose::Util::TypeConstraints;
+    use Moose::Util::TypeConstraints 'enum';
 
     parameter format => (
         isa      => (enum ['Dumper', 'Storable']),

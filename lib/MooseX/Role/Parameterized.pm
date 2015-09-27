@@ -9,7 +9,7 @@ use Moose 2.0300 ();
 use Moose::Exporter;
 use Carp 'confess';
 use Moose::Util 'find_meta';
-use namespace::clean;
+use namespace::clean 0.19;
 
 use MooseX::Role::Parameterized::Meta::Trait::Parameterizable;
 

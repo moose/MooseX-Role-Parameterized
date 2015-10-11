@@ -122,7 +122,7 @@ can now also choose type, default value, whether it's required, B<traits>, etc.
             isa    => $p->type,
             ...
         );
-    }
+    };
 
 =item Inform a role of your class' attributes and methods
 
@@ -138,7 +138,7 @@ instrument, or which attributes to dump to a file.
     role {
         my $p = shift;
         around $p->instrument_method => sub { ... };
-    }
+    };
 
 =item Arbitrary execution choices
 
@@ -158,7 +158,7 @@ states.
             if ($p->save_intermediate) { ... }
             ...
         };
-    }
+    };
 
 =item Deciding a backend
 
@@ -181,7 +181,7 @@ L<Storable>. Which backend to use can be a parameter.
             method thaw   => \&YAML::Load;
         }
         ...
-    }
+    };
 
 =item Additional validation
 
@@ -207,7 +207,7 @@ names. Since parameterized roles have direct access to its consumer, you can ins
             or confess "Your push parameter must be a scalar";
 
         ...
-    }
+    };
 
 =back
 

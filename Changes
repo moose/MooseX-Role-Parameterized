@@ -1,6 +1,8 @@
 Revision history for MooseX-Role-Parameterized
 
 {{$NEXT}}
+   - Give 'anonymous' generated roles names that are similar to the original
+     parameterized role so debug output is easier to read
 
 1.08      2014-08-23 22:38:12Z
     - add x_breaks metadata for incompatibility issue with MooseX::Storage

@@ -48,6 +48,7 @@ sub _build_parameters_metaclass {
     );
 }
 
+my $package_counter = 0;
 sub generate_role {
     my $self     = shift;
     my %args     = @_;
@@ -62,19 +63,16 @@ sub generate_role {
     my $parameterized_role_metaclass = $self->parameterized_role_metaclass;
     use_module($parameterized_role_metaclass);
 
-    my $role;
-    if ($args{package}) {
-        $role = $parameterized_role_metaclass->create(
-            $args{package},
-            genitor    => $self,
-            parameters => $parameters,
-        );
-    } else {
-        $role = $parameterized_role_metaclass->create_anon_role(
-            genitor    => $self,
-            parameters => $parameters,
-        );
+    my $package = $args{package};
+    unless ($package) {
+        $package_counter++;
+        $package = $self->name . '::__ANON__::SERIAL::' . $package_counter;
     }
+    my $role = $parameterized_role_metaclass->create(
+        $package,
+        genitor    => $self,
+        parameters => $parameters,
+    );
 
     local $MooseX::Role::Parameterized::CURRENT_METACLASS = $role;
 

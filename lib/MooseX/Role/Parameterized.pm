@@ -2,7 +2,7 @@ package MooseX::Role::Parameterized;
 # ABSTRACT: Moose roles with composition parameters
 # KEYWORDS: moose extension parameter role arguments dynamic
 
-our $VERSION = '1.09';
+our $VERSION = '1.10';
 
 use 5.008001;
 use Moose 2.0300 ();

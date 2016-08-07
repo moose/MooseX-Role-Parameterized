@@ -1,5 +1,7 @@
 Revision history for MooseX-Role-Parameterized
 
+{{$NEXT}}
+
 1.09      2016-08-07 01:20:31Z
    - Give 'anonymous' generated roles names that are similar to the original
      parameterized role so debug output is easier to read

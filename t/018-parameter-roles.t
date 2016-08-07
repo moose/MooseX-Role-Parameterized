@@ -1,7 +1,6 @@
 use strict;
 use warnings;
-use Test::More skip_all => "Not implemented yet";
-#use Test::More;
+use Test::More 0.88 skip_all => "Not implemented yet";
 
 {
     package Test::Role;

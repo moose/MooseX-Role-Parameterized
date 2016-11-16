@@ -23,9 +23,9 @@ BEGIN {
 };
 
 BEGIN {
-    package t::MooseX::LabeledAttributes;
+    package MyApp::MooseX::LabeledAttributes;
     use Moose::Exporter;
-    $INC{'t/MooseX/LabeledAttributes.pm'} = 1;
+    $INC{'MyApp/MooseX/LabeledAttributes.pm'} = 1;
 
     Moose::Exporter->setup_import_methods(
         class_metaroles => {
@@ -37,7 +37,7 @@ BEGIN {
 do {
     package MyClass::LabeledURL;
     use Moose;
-    use t::MooseX::LabeledAttributes;
+    use MyApp::MooseX::LabeledAttributes;
 
     has name => (
         is => 'ro',
@@ -49,7 +49,7 @@ do {
     );
 
     no Moose;
-    no t::MooseX::LabeledAttributes;
+    no MyApp::MooseX::LabeledAttributes;
 };
 
 my $meta = MyClass::LabeledURL->meta;

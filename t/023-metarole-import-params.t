@@ -23,9 +23,9 @@ BEGIN {
 };
 
 BEGIN {
-    package t::MooseX::LabeledAttributes;
+    package MyApp::MooseX::LabeledAttributes;
     use Moose::Exporter;
-    $INC{'t/MooseX/LabeledAttributes.pm'} = 1;
+    $INC{'MyApp/MooseX/LabeledAttributes.pm'} = 1;
 
     # what is the secret sauce?
 }
@@ -33,7 +33,7 @@ BEGIN {
 do {
     package MyClass::LabeledURL;
     use Moose;
-    use t::MooseX::LabeledAttributes default => 'no label';
+    use MyApp::MooseX::LabeledAttributes default => 'no label';
 
     has name => (
         is => 'ro',
@@ -45,13 +45,13 @@ do {
     );
 
     no Moose;
-    no t::MooseX::LabeledAttributes;
+    no MyApp::MooseX::LabeledAttributes;
 };
 
 do {
     package MyClass::LabeledPost;
     use Moose;
-    use t::MooseX::LabeledAttributes default => 'TODO!';
+    use MyApp::MooseX::LabeledAttributes default => 'TODO!';
 
     has name => (
         is => 'ro',
@@ -63,7 +63,7 @@ do {
     );
 
     no Moose;
-    no t::MooseX::LabeledAttributes;
+    no MyApp::MooseX::LabeledAttributes;
 };
 
 my $url_meta = MyClass::LabeledURL->meta;

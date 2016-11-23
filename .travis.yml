@@ -11,6 +11,7 @@ perl:
 # https://github.com/travis-ci/travis-cookbooks/blob/master/ci_environment/perlbrew/attributes/multi.rb
   - blead
   - dev
+  - "5.24"
   - "5.22"
   - "5.20"
   - "5.18"

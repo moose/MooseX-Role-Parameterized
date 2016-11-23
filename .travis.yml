@@ -28,7 +28,7 @@ matrix:
       perl: 5.22
 env:
   global:
-    - RELEASE_TESTING=1
+    - RELEASE_TESTING=0
     - AUTHOR_TESTING=1
 before_install:
   - eval $(curl https://travis-perl.github.io/init) --auto

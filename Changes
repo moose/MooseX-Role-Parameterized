@@ -1,6 +1,8 @@
 Revision history for MooseX-Role-Parameterized
 
 {{$NEXT}}
+   - add MooseX::Role::Parameterised as stub documentation, for
+     discoverability
 
 1.09      2016-08-07 01:20:31Z
    - Give 'anonymous' generated roles names that are similar to the original

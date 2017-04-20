@@ -1,5 +1,7 @@
 Revision history for MooseX-Role-Parameterized
 
+{{$NEXT}}
+
 1.10      2017-04-20 17:50:53Z
    - add MooseX::Role::Parameterised as stub documentation, for
      discoverability

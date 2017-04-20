@@ -1,7 +1,7 @@
 package MooseX::Role::Parameterized::Meta::Trait::Parameterized;
 # ABSTRACT: trait for parameterized roles
 
-our $VERSION = '1.10';
+our $VERSION = '1.11';
 
 use Moose::Role;
 use MooseX::Role::Parameterized::Parameters;

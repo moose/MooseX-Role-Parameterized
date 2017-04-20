@@ -1,7 +1,7 @@
 package MooseX::Role::Parameterized::Meta::Role::Parameterized;
 # ABSTRACT: metaclass for parameterized roles
 
-our $VERSION = '1.10';
+our $VERSION = '1.11';
 
 use Moose;
 extends 'Moose::Meta::Role';

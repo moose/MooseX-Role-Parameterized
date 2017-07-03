@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Test::More 0.88;
 
-use Test::Requires {
+use Test::Needs {
     'MooseX::Role::WithOverloading' => '0.14',
 };
 

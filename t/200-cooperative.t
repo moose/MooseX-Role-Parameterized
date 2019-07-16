@@ -9,7 +9,7 @@ use Test::Needs {
 do {
     package MyParameterizedRole;
 
-    use MooseX::Role::WithOverloading;
+    BEGIN { MooseX::Role::WithOverloading->import }
     use MooseX::Role::Parameterized;
 
     use overload q{""} => '_stringify';

@@ -139,7 +139,8 @@ L<MooseX::Role::Parameterized::Tutorial> for a much gentler introduction.
 Your parameterized role consists of two new things: parameter declarations
 and a C<role> block.
 
-Parameters are declared using the L</parameter> keyword which very much
+Parameters are declared using the
+L<MooseX::Role::Parameterized::Tutorial/parameter> keyword which very much
 resembles L<Moose/has>. You can use any option that L<Moose/has> accepts. The
 default value for the C<is> option is C<ro> as that's a very common case. Use
 C<< is => 'bare' >> if you want no accessor. These parameters will get their
